@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-COPY . .
+COPY . .  # Copy all files including the new 'public' folder
 
 EXPOSE 3000
 CMD ["npm", "start"]
