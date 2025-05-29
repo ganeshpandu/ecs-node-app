@@ -37,7 +37,7 @@ jobs:
     - name: Download existing ECS Task Definition
       run: |
         aws ecs describe-task-definition \
-          --task-definition ${{ secrets.ECS_TASK_DEFINITION_FAMILY }} \
+          --task-definition ecs-node-app-tdf \
           --query taskDefinition > task-definition.json
 
     - name: Update image in Task Definition
